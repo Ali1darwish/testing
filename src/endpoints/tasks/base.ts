@@ -9,8 +9,8 @@ export const task = z.object({
   q2: z.string(),
   q3: z.string(),
   q4: z.string(),
-  ttrue: z.integer(),
-  ffalse: z.integer(),
+  ttrue: z.string(),
+  ffalse: z.string(),
 });
 
 export const TaskModel = {
