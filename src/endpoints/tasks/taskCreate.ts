@@ -14,8 +14,8 @@ export class TaskCreate extends D1CreateEndpoint<HandleArgs> {
   q2: true,
   q3: true,
   q4: true,
-  true:true,
-  false: true,
+  ttrue:true,
+  ffalse: true,
     }),
   };
 }
