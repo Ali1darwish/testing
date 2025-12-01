@@ -3,10 +3,14 @@ import { z } from "zod";
 export const task = z.object({
   id: z.number().int(),
   name: z.string(),
-  slug: z.string(),
-  description: z.string(),
-  completed: z.boolean(),
-  due_date: z.string().datetime(),
+  supject: z.string(),
+  question: z.string(),
+  q1: z.string(),
+  q2: z.string(),
+  q3: z.string(),
+  q4: z.string(),
+  true: z.integer(),
+  false: z.integer(),
 });
 
 export const TaskModel = {
