@@ -2,8 +2,12 @@
 CREATE TABLE IF NOT EXISTS tasks (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     name TEXT NOT NULL,
-    slug TEXT NOT NULL,
-    description TEXT NOT NULL,
-    completed INTEGER NOT NULL,
-    due_date DATETIME NOT NULL
+    supject TEXT NOT NULL,
+    question TEXT NOT NULL,
+    q1 TEXT ,
+    q2 TEXT ,
+    q3 TEXT,
+    q4 TEXT,
+    ttrue TEXT,
+    ffalse TEXT
 );
