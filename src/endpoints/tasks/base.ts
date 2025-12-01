@@ -1,7 +1,9 @@
 import { z } from "zod";
 
 export const task = z.object({
-  id: z.number().int(),
+  id: z.number().refine((n) => Number.isInteger(n), {
+    message: "id must be an integer",
+  }),
   name: z.string(),
   supject: z.string(),
   question: z.string(),
