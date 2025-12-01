@@ -1,9 +1,7 @@
 import { z } from "zod";
 
 export const task = z.object({
-  id: z.number().refine((n) => Number.isInteger(n), {
-    message: "id must be an integer",
-  }),
+  id: z.number(), // بدون .int()
   name: z.string(),
   supject: z.string(),
   question: z.string(),
@@ -20,6 +18,9 @@ export const TaskModel = {
   primaryKeys: ["id"],
   schema: task,
   serializer: (obj: Record<string, string | number | boolean>) => {
+    if (!Number.isInteger(obj.id)) {
+      throw new Error("id must be an integer");
+    }
     return {
       ...obj,
       completed: Boolean(obj.completed),
