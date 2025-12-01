@@ -43,8 +43,7 @@ const openapi = fromHono(app, {
 // Register Tasks Sub router
 openapi.route("/tasks", tasksRouter);
 
-// Register other endpoints
-openapi.post("/dummy/:slug", DummyEndpoint);
+
 
 // Export the Hono app
 export default app;
